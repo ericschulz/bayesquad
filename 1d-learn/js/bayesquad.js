@@ -233,8 +233,11 @@ function drawaxis2(svg){
 
 
 //Draw axes
-drawaxis(mystage0);
-drawaxis(mystage1);
+mystage0.append("image")
+  .attr("xlink:href", "https://raw.githubusercontent.com/ericschulz/bayesquad/master/height/00000000001.png")
+  .attr({ width: 380,height: 380 })
+  .attr("class", "bg");
+
 drawaxis2(mystage2);
 drawaxis(mystage3);
 drawRectangle(mystage2, scalex2(0)-2, scaley2(10)-2, Math.abs(scalex2(0)-scalex2(10))+4, Math.abs(scalex2(0)-scalex2(10))+4);
