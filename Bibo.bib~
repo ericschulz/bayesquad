@@ -1,0 +1,76 @@
+@inproceedings{schulz2015learning,
+  title={Learning and decisions in contextual multi-armed bandit tasks},
+  author={Schulz, Eric and Konstantinidis, Emmanouil and \& Speekenbrink, Maarten},
+  booktitle={Proceedings of the Thirty-Seventh Annual Conference of the Cognitive Science Society},
+  year={2015}
+}
+
+@inproceedings{schulz2015exploration,
+  title={Exploration-Exploitation in a Contextual Multi-Armed Bandit Task},
+  author={Schulz, Eric and Konstantinidis, Emmanouil and Speekenbrink, Maarten},
+  booktitle={International Conference on Cognitive Modeling},
+  pages={118--123},
+  year={2015}
+}
+
+
+@article{schulzprecitability,
+  title={Assessing the predictability of functions},
+  author={Schulz, Eric and Tenenbaum, Joshua B and Reshef, David and Speekenbrink, Maarten and Gershman, Samuel J},
+  journal={},
+  volume={},
+  number={},
+  pages={},
+  year={2015},
+  publisher={}
+}
+
+@inproceedings{parpart2015active,
+  title={Active learning as a means to distinguish among prominent decision strategies},
+  author={Parpart, Paula and Schulz, Eric and Speekenbrink, Maarten and Love, Bradley C.},
+  booktitle={Proceedings of the Thirty-Seventh Annual Conference of the Cognitive Science Society},
+  year={2015}
+}
+
+@article{schulzpredictchoice,
+  title={Predit choice- a comparison of 21 mathematical models},
+  author={Schulz, Eric and Speekenbrink, Maarten and Shanks, David Richard},
+  journal={Proceedings of the 36th Annual Conference of the Cognitive Science Society. Austin, TX},
+  volume={1},
+  number={1},
+  pages={1056--1064},
+  year={2014},
+  publisher={Cognitive Science Society.}
+}
+
+
+@article{cokely2012measuring,
+  title={Measuring risk literacy: The Berlin numeracy test},
+  author={Cokely, Edward T and Galesic, Mirta and Schulz, Eric and Ghazal, Saima and Garcia-Retamero, Rocio},
+  journal={Judgment and Decision Making},
+  volume={7},
+  number={1},
+  pages={25--47},
+  year={2012},
+  publisher={Society for Judgment and Decision Making}
+}
+
+@article{schulz2011persistent,
+  title={Persistent bias in expert judgments about free will and moral responsibility: A test of the expertise defense},
+  author={Schulz, Eric and Cokely, Edward T and Feltz, Adam},
+  journal={Consciousness and cognition},
+  volume={20},
+  number={4},
+  pages={1722--1731},
+  year={2011},
+  publisher={Elsevier}
+}
+
+@incollection{cokely2013measure,
+  title={How to measure risk comprehension in educated samples},
+  author={Cokely, Edward T and Ghazal, Saima and Galesic, Mirta and Garcia-Retamero, Rocio and Schulz, Eric},
+  booktitle={Transparent Communication of Health Risks},
+  pages={29--52},
+  year={2013},
+  publisher={Springer}
+}

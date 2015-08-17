@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Eric Schulz">
+    <meta charset="utf-8">
+
+
+    <title>Function Learning</title>
+     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script> 
+    <script src="https://dl.dropboxusercontent.com/u/4213788/d3.min.js" charset="utf-8"></script>
+    <script src="https://dl.dropboxusercontent.com/u/4213788/numeric-1.2.6.js" charset="utf-8"></script>
+    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="https://dl.dropboxusercontent.com/u/4213788/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href=" https://dl.dropboxusercontent.com/u/4213788/grid.css" rel="stylesheet" type="text/css">
+
+ </head>
+ <body>
+ 
+ <div class="container">
+    <div class="row">
+ 
+<div id="page1" style="display:block">
+    <h3>Welcome: </h3>
+    <p> This study is part of a research project conducted by Christoph Niemeyer, University College London. </p>
+    <p> In this study we want to investigate how humans learn about probability distributions.</p>
+    <p> Please read the instruction carefully and try to perform as well as you can.</p>
+    <p> If you have any questions, please write an email to <font color="blue">christoph.niemeyer.14@.ucl.ac.uk </font></p>
+    <p></p>
+    <button type="button" name="button"; onclick="clickStart('page1', 'page2')"; >Continue</button>
+</div>
+
+
+<!--Second page contains Ethics statement-->
+<div id="page2" style="display:none">
+    <h3>Consent form for participation in this online experiment</h3>
+    <p> This study has been approved by UCL CPB Department's Ethics Chair: CPB/2015/08 <br>
+        Designed by: Eric Schulz <br>
+	      Email: <font color="blue">christoph.niemeyer.14@.ucl.ac.uk </font><br>
+    </p>
+    <p>We would like to invite you to participate in this research project. You should only participate if you want to; choosing not to take part will not disadvantage you in any way. Before you decide whether you want to take part, it is important for you to read the following information carefully and discuss it with others if you wish. Ask us if there is anything that is not clear or you would like more information.</p>
+   <p>We are investigating how people make sense out of their environment. In this study you will perform a simple computer task in which you need to learn about probability distributions. You will have to choose input values in order to observe the corresponding frequency distribution. After this, you will be asked to assess your own position on that given distribution. </p>
+    <p>The study should not take longer than 10 minutes. Upon completion of the study, you will be paid a basic fee of £1. In order to qualify for the credit and bonus you need to finish the study.</p>
+    <p>All data will be handled according to the Data Protection Act 1998. All responses are treated as confidential and anonymous. All data will be pooled and published in aggregate form only. Only Eric Schulz and researchers working with him will have access to these data. </p>
+    <p>It is up to you to decide whether or not to take part. If you choose not to participate it will involve no penalty or loss of benefits to which you are otherwise entitled. If you decide to take part you are still free to withdraw at any time and without giving a reason.</p>
+    
+<p>By clicking on the button below, you agree to the following:</p>
+<br>
+<p>I have read the above information.</p>
+<p>I understand that I am free to withdraw from the study without penalty if I so wish and I consent tothe processing of my personal information for the purposes of this study only and that it will not be used for any other purpose. I understand that such information will be treated as strictly confidential and handled in accordance with the provisions of the Data Protection Act 1998. </p>
+<p>I understand that the information I have submitted will be published as a report. Confidentiality and anonymity will be maintained and it will not be possible to identify me from any publications. I understand that I am being paid for my assistance in this research.
+</p>
+<br>
+<button type="button" name="button"; onclick="clickStart('page2','page4')"; >Agree</button>
+</div>
+
+<div id="page4" style="display:none">
+    <h3>Instructions:</h3>
+<p><b>Please read the following instructions very carefully: </b></p>
+<br>
+<p> In the following study, it is your task to learn about a frequency distribution as well as you can. Learning about a frequency distribution means that you can observe how many people fell into different categories when we asked 10.000 people to provide us with their measurements. For example, if we had asked 1000 people about their weekly alcohol consumption, maybe 100 would have said to consume more than 40 units. </p>
+<p> Your task now will be the following: </p> 
+<p>1. Provide us with a self-assessment? For example, state how tall you are.</p>
+<p>2. Estimate how many people will fall below your value. For example, estimate how many people (out of 1000) you think would be smaller than you.</p>
+<p>3. Explore a frequency chart. Here, you will have the chance to explore a frequency distribution. Imagine that we have measured the body size of 1000 people. Now you can check, for example, how many of them were between 5'8 foot and 6 foot, etc. However, you only have 5 queries available. This means you can only look up how many people fell in between a certain range for five different ranges. It is your task to look up these frequencies as wisely as possible in order to assess where on the distribution you would be.</p> 
+<p>4. Re-assess your original assessment. This time gives you the opportunity to reassess your original assessment based on the knowledge you have gained while exploring the frequency graph.</p>
+<br><br>
+<p><b>Please click on the button below to see a short example.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="getstarted()"; >Go to example</button>  
+        </div>
+</div>
+
+<div id="pageexample" style="display:none">
+      <!-- Begin page content -->
+       <div class="page-header">
+          <h1> <font size="4">Please try to get used to the task structure.</font> </h1>
+        </div>
+         <div id="explainexshow" style="display:block">
+         <p> <b>Simple example - Explanation:</b></p><br>
+         <p><b>I.</b> The <font color="green">green dot</font> marks the value of the <font color="green">input</font>. When you move the slider, the green dot will move around as well. </p>
+         <p><b>II.</b> When you click on "Investigate value" the value of the green dot at that moment will be used as an input and an output will be produced. </p>
+         <p><b>III.</b> The <font color="red">output</font> will be marked by a <font color="red">red dot</font>.</p>
+         <p><b>IV.</b> On top of the graph, you can see how many invesitgations you have left.</p>
+         <p><b>V.</b> Remember, it is your task to learn the relationship between inputs and outpus as well as you can by choosing your inputs wisely.</p>
+         <p><b>VI.</b> In this simple example, every output is the same as the input.</p>
+         <p><b>VII.</b> You have 10 investigations to get used to the task before the real study begins.</p>
+         <button type="button" name="button"; onclick="clickStart('explainexshow','explainexhide')"; >Hide explanation</button>
+         </div>
+         <div id="explainexhide" style="display:none">
+         <button type="button" name="button"; onclick="clickStart('explainexhide','explainexshow')"; >Show explanation</button>
+        </div>
+      <center><b><div id="remainingex">Number of trials left: 10</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot0"></div>
+          <div id="sliderex"></div>
+          <span id="sliderexvalue">0</span><br />
+              
+          
+          <button type="button" name="button"; onclick="dotrialex2()"; >Investigate value</button>          
+      </div>  
+      <br><br>
+</div>
+
+<div id="page5" style="display:none">
+      <fieldset>
+            <legend>Please answer a few questions about this HIT before proceeding</legend>
+            <fieldset style="float:left;width:400px;margin:5px">
+                What is your task in this study?<br>
+                <input type="radio" name="q1" id="icheck1"  >Learn about frequencies<br>
+                <input type="radio" name="q1" >Maximize output<br>
+                <input type="radio" name="q1" >Do nothing<br>
+                <input type="radio" name="q1" >I do not know<br>
+            </fieldset>
+            
+            <fieldset style="float:left;width:400px;margin:5px">
+                The output for a particular input value...<br>
+                <input type="radio" name="q2"  >is always the same<br>
+                <input type="radio" name="q2"  id="icheck2" >can vary<br>
+                <input type="radio" name="q2"  >is 0<br>
+                <input type="radio" name="q2"  >I do not know<br>
+            </fieldset>
+
+            <fieldset style="float:left;width:400px;margin:5px">
+                This experiment should take less than ...<br>
+                <input type="radio" name="q3"               >1 minute<br>
+                <input type="radio" name="q3"               >5 minutes<br>
+                <input type="radio" name="q3" id="icheck3"  >10 minutes<br>
+                <input type="radio" name="q3"               >20 minutes<br>
+            </fieldset>
+                        
+        </fieldset>
+          
+            <br><br><br><br>
+          <p> Only when you answered all the question correctly, will you be able to start the HIT.</p>
+     <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="instructioncheck()"; >Check answers</button>  
+    </div>
+</div>
+
+
+<div id="pagecheckcorrect" style="display:none">
+        <br><br>
+        Very good. You have answered all questions correctly and can now start the study. <br><br>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickStart('pagecheckcorrect','page6')"; >Start task</button>  
+        </div>
+</div>
+
+<div id="page6" style="display:none">
+         <h1> <font size="4">Please try to learn the relationship as well as you can.</font> </h1>
+         <div id="explainlearnshow" style="display:block">
+         <p> <b>Relationship learning - Explanation:</b></p><br>
+         <p><b>I.</b> The <font color="green">green dot</font> marks the <font color="green">input</font>. When you move the slider, the green dot will move around as well. </p>
+         <p><b>II.</b> When you click on "Investigate value" the value of the green dot at that moment will be used as an input and an output will be produced. </p>
+         <p><b>III.</b> The <font color="red">output</font> will be marked by a <font color="red">red dot</font>.</p>
+         <p><b>IV.</b> On top of the graph, you can see how many invesitgations you have left.</p>
+         <p><b>V.</b> Remeber, it is your task to learn the relationship between inputs and outpus as well as you can by choosing your inputs wisely.</p>
+         <p><b>VI.</b> The output can vary for each input and does not always have to be the same.</p>
+         <p><b>VII.</b> You have 40 investigations to learn the relatinship before the test begins.</p>
+         
+         <button type="button" name="buttona"; onclick="clickStart('explainlearnshow','explainlearnhide')"; >Hide explanation</button>
+        </div>
+
+      <div id="explainlearnhide" style="display:none">
+         <button type="button" name="button"; onclick="clickStart('explainlearnhide','explainlearnshow')"; >Show explanation </button>
+      </div>
+        <center><b><div id="remain1">Number of trials left: 40</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot1"></div>
+          <div id="slider1"></div>
+          <span id="slider1value">0</span><br />
+          <button type="button" name="button"; onclick="dotrial1()"; >Investigate value</button>  
+      </div>
+      <br><br>
+</div>
+
+<div id="page7" style="display:none">
+        <h1> <font size="4"> Please try to predict the following output. </font> </h1>
+         <div id="explainpredshow" style="display:block">
+            <p> <b>Predict the output - Explanation:</b></p><br>
+            <p><b>I.</b> The <font color="green">green dot</font> marks the <font color="green">input</font>. When you move around the slider, the green dot will move up or down. </p>
+            <p><b>II.</b> When you click on "Choose value" the value of the green dot at that moment will be used your prediction. </p>
+            <p><b>III.</b> Your prediction will be marked by a <font color="blue">blue dot</font>.</p>
+            <p><b>VI.</b> <b>Notice that the graph is now bigger than in the learning stage. This is because we are also interested in your predictions for values outside of what you have seen before (i.e., outside of the black frame).</b></p>
+            <p><b>V.</b> On top of the graph, you can see how many predictions are left.</p>
+            <p><b>VI.</b> Remeber, it is your task to predict the output as well as you can.</p>
+            <p><b>VII.</b> Notice that the black frame marks the space where you have learned how the function looks like before. The reason you are able to predict values outside of the black box is that we want you to enter how you think teh function behaves for input values outside of this box.</p>
+            <p><b>VIII.</b> You have to make 14 predictions before you can go to the next page.</p>
+            <button type="button" name="button"; onclick="clickStart('explainpredshow','explainpredhide')"; >Hide explanation</button>
+         </div>
+         <div id="explainpredhide" style="display:none">
+             <button type="button" name="button"; onclick="clickStart('explainpredhide','explainpredshow')"; >Show explanation</button>
+         </div>
+         <center><b><div id="tobepredicted">Number of trials left: 14</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot2"></div>
+          <div id="slider2"></div>
+          <span id="slider2value">0</span><br />
+           <button type="button" name="button"; onclick="dotrial2()"; >Choose value</button>  
+          </div>
+          <br><br>
+</div>
+
+<div id="page8" style="display:none">
+      <!-- Begin page content -->
+          <div class="page-header">
+        
+          <h1> <font size="4">Please try to mark the point where you expect the maximum to be.
+                 This means you have to choose three points so that you maximize your output.
+          </font> </h1>
+         </div>
+         <div id="explainmaxshow" style="display:block">
+        <p> <b>Find the maximum - Explanation:</b></p><br>
+         <p><b>I.</b> The <font color="green">green dot</font> marks the <font color="green">input</font>. When you move around the slider, the green dot will move around as well. </p>
+         <p><b>II.</b> When you click on "Choose value" the value of the green dot at that moment will be used as your proposed input. </p>
+         <p><b>III.</b> <font color="orange">Your input</font> will then be marked by a <font color="orange">orange dot</font>.</p>
+         <p><b>IV.</b> On top of the graph, you can see how many choices you have left.</p>
+         <p><b>V.</b> Remeber, it is your task to mark the points, where you would expect to get the highest output.</p>
+         <p><b>VI.</b> You will not see the output in this task, but only your choices.</p>
+         <p><b>VII.</b> You have to make 3 choices before you can go to the next page. You can choose the same input value multiple times if you're certain where the maximum is..</p>
+         <button type="button" name="button"; onclick="clickStart('explainmaxshow','explainmaxhide')"; >Hide explanation</button>
+         </div>
+         <div id="explainmaxhide" style="display:none">
+         <button type="button" name="button"; onclick="clickStart('explainmaxhide','explainmaxshow')"; >Show explanation</button>
+        </div>
+        <center><b><div id="remainmax">Number of trials left: 3</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot3"></div>
+          <div id="slider3"></div>
+          <span id="slider3value">0</span><br/>
+          <button type="button" name="button"; onclick="dotrial3()"; >Choose value</button>  
+          </div>
+          <br><br>
+</div>
+
+<div id="page9" style="display:none">
+        <fieldset>
+            <legend>Please tell us a bit about yourself</legend>
+            <div style="float:left;width:400px;margin:5px">
+                How old are you?<br>
+                <input id="age" type="radio" name="age" value="20" >18-25<br>
+                <input id="age" type="radio" name="age" value="30" >26-35<br>
+                <input id="age" type="radio" name="age" value="40" >36-50<br>
+                <input id="age" type="radio" name="age" value="50" >above 50<br>
+            </div>
+            
+            <div style="float:left;width:400px;margin:5px">
+                What's your gender?<br>
+                <input id="gender" type="radio" name="gender" value="0" >Female<br>
+                <input id="gender" type="radio" name="gender" value="1" >Male<br>
+            </div>
+
+            <div style="float:left;width:400px;margin:5px">
+                Handedness?<br>
+                <input type="radio" name="handed" value="1"          >Right<br>
+                <input type="radio" name="handed" value="2"          >Left<br>
+              </div>
+                        
+        </fieldset>
+        <div style="width:50px;margin:0 auto">
+         <button type="button" name="button"; onclick="senddata()"; >Done</button>
+        </div>
+</div>
+
+<div id="page10" style="display:none">
+    <h3>Thank you for participating in our experiment!</h3>
+    <p>Your prolific codes is: <b>quadrature2015</b></p>
+
+</div>
+
+</div>
+</div>
+<script src="js/bayesquad.js" charset="utf-8"></script>
+</body>
+</html>

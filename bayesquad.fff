@@ -1,0 +1,11 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\caption{Bayesian Cognitivism based on non-parametric models.}
+\label{dense}
+  \centering
+    \includegraphics[scale=0.6]{bayescog.pdf}
+ \label{denseb}
+\end{figure*}
+\efloatseparator
+ 

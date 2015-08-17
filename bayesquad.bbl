@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Schulz et~al.(2015)Schulz, Konstantinidis, \&
+  \&~Speekenbrink}]{schulz2015learning}
+Schulz, E., Konstantinidis, E., \& \&~Speekenbrink, M. (2015).
+\newblock Learning and decisions in contextual multi-armed bandit tasks.
+\newblock In {\em Proceedings of the Thirty-Seventh Annual Conference of the
+  Cognitive Science Society\/}.
+
+\end{thebibliography}

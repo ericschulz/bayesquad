@@ -1,0 +1,20 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{6}
+\contentsline {chapter}{\numberline {2}Bayesian Cognitivism}{7}
+\contentsline {section}{\numberline {2.1}Different parts of an intelligent system}{7}
+\contentsline {section}{\numberline {2.2}Quadrature}{7}
+\contentsline {chapter}{\numberline {3}Quadrature}{9}
+\contentsline {section}{\numberline {3.1}The problem: expectations over functions}{9}
+\contentsline {section}{\numberline {3.2}Active Sampling Approaches}{9}
+\contentsline {subsection}{\numberline {3.2.1}Random Walk}{9}
+\contentsline {subsection}{\numberline {3.2.2}Metropolis}{9}
+\contentsline {subsection}{\numberline {3.2.3}Whatever else you like}{9}
+\contentsline {subsection}{\numberline {3.2.4}Bayesian Quadrature}{9}
+\contentsline {chapter}{\numberline {4}Methods}{10}
+\contentsline {section}{\numberline {4.1}Design}{10}
+\contentsline {section}{\numberline {4.2}Participants}{10}
+\contentsline {chapter}{\numberline {5}Results}{11}
+\contentsline {section}{\numberline {5.1}Raw results}{11}
+\contentsline {section}{\numberline {5.2}Modeling results}{11}
+\contentsline {chapter}{\numberline {6}Discussion}{12}
+\contentsline {chapter}{\numberline {7}Conclusion}{13}
