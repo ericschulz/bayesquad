@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Christoph Niemeyer">
+    <meta charset="utf-8">
+
+
+    <title>Probability Learning Study</title>
+     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script> 
+    <script src="https://dl.dropboxusercontent.com/u/4213788/d3.min.js" charset="utf-8"></script>
+    <script src="https://dl.dropboxusercontent.com/u/4213788/numeric-1.2.6.js" charset="utf-8"></script>
+    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="https://dl.dropboxusercontent.com/u/4213788/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href=" https://dl.dropboxusercontent.com/u/4213788/grid.css" rel="stylesheet" type="text/css">
+
+ </head>
+ <body>
+ 
+ <div class="container">
+    <div class="row">
+ 
+<div id="page1" style="display:block">
+    <h3>Welcome: </h3>
+    <p> This study is part of a research project conducted by Christoph Niemeyer, University College London. </p>
+    <p> In this study we want to investigate how humans learn about probability distributions.</p>
+    <p> Please read the instruction carefully and try to perform as well as you can.</p>
+    <p> If you have any questions, please write an email to <font color="blue">christoph.niemeyer.14@.ucl.ac.uk </font></p>
+    <p></p><br>
+  Please enter your Prolific Academic ID: <input type="text" id="prolific"><br>
+
+    <button type="button" name="button"; onclick="clickStart('page1', 'page2')"; >Continue</button>
+</div>
+
+
+<!--Second page contains Ethics statement-->
+<div id="page2" style="display:none">
+    <h3>Consent form for participation in this experiment</h3>
+    <p> This study has been approved by UCL CPB Department's Ethics Chair: CPB/2015/08 <br>
+        Designed by: Christoph Niemeyer<br>
+	      Email: <font color="blue">christoph.niemeyer.14@.ucl.ac.uk </font><br>
+    </p>
+    <p>We would like to invite you to participate in this research project. You should only participate if you want to; choosing not to take part will not disadvantage you in any way. Before you decide whether you want to take part, it is important for you to read the following information.</p>
+   <p>We are investigating how people make sense out of their environment. In this study you will perform a simple computer task in which you need to learn about probability distributions. You will have to choose input values in order to observe the corresponding frequency distribution. Prior to and after this, you will be asked to assess your own position on a given distribution. </p>
+    <p>The study should not take longer than 10 minutes. Upon completion of the study, you will be paid a basic fee of £1.</p>
+    <p>All data will be handled according to the Data Protection Act 1998. All responses are treated as confidential and anonymous. All data will be pooled and published in aggregate form only. Only Christoph Niemeyer and researchers working with him will have access to these data. </p>
+     
+<p>By clicking on the button below, you agree to the following:</p>
+<br>
+<p>I have read the above information.</p>
+<p>I understand that I am free to withdraw from the study without penalty if I so wish and I consent to the processing of my personal information for the purposes of this study only and that it will not be used for any other purpose. I understand that such information will be treated as strictly confidential and handled in accordance with the provisions of the Data Protection Act 1998. </p>
+<p>I understand that the information I have submitted will be published as a report. Confidentiality and anonymity will be maintained and it will not be possible to identify me from any publications. I understand that I am being paid for my assistance in this research.
+</p>
+<br>
+<button type="button" name="button"; onclick="clickStart('page2','page3')"; >Agree</button>
+</div>
+
+<div id="page3" style="display:none">
+    <h3>Instructions:</h3>
+<p><b>Please read the following instructions very carefully: </b></p>
+<br>
+<p> In the following study, it is your task to learn about a frequency distribution as well as you can. Learning about a frequency distribution means that you can observe how many people fell into different categories when we asked 1000 people to provide us with their measurements. For example, if we had asked 1000 people about their weekly alcohol consumption, maybe 100 would have said to consume more than 40 units. </p>
+<p> Your task will be the following: </p> 
+<p>1. Provide us with a self-assessment. For example, state how much you drink per week.</p>
+<p>2. Estimate how many people will fall below your value. For example, estimate how many people (out of 1000) you think drink less than you.</p>
+<p>3. Explore a frequency chart. Here, you will have the chance to explore a frequency distribution. Imagine that we have asked 1000 people about their drinking habits. Now you can check, for example, how many of them drank between 5 and 7 units or between 3 and 5 units, etc. However, you only have 5 queries available. This means you can only look up how many people fell in between a certain range for five different ranges. It is your task to look up these frequencies as wisely as possible in order to assess where on the distribution you would be later on.</p> 
+<p>4. Re-assess your original assessment. This time gives you the opportunity to reassess your original assessment based on the knowledge you have gained while exploring the frequency graph. For example, once you have gotten an intuition about how many people fell within which range, it should be easier for you to assess your own habits, i.e. how many people drink less than you.</p>
+<br><br>
+<p><b>Please click on the button below to start the task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickStart('page3','page4')"; >Go to task</button>  
+        </div>
+</div>
+
+
+<div id="page4" style="display:none">
+    <h3>Self-assessment: Height:</h3>
+<p> We have measured the height of 1000 students (male and female) in cm. It is now your task to provide a self-assessment of your height and how many people of those 1000 asked students you expect to be smaller than you.</p><br>
+  How tall are you in cm?: <input type="text" id="height"><br>
+  How many (out of 1000) people will be smaller than you?: <input type="text" id="heightprior"><br>
+<br><br>
+<p><b>Please click on the button below to start the task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckprior('page4','page5', 'height', 100, 250, 'heightprior')"; >Go to task</button>  
+        </div>
+</div>
+
+
+
+
+<div id="page5" style="display:none">
+      <!-- Begin page content -->
+       <div class="page-header">
+          <h1> <font size="4">Please explore the graph to gain more knowledge.</font> </h1>
+        </div>
+         <div id="explain1show" style="display:block">
+         <p> <b>Sampling for Height - Explanation:</b></p><br>
+         <p><b>I.</b> Below you see an empty plot of a frequency distribution. A frequency distribution tells you how many people of the 1000 people we have asked fell into different ranges (ranges are provided below). For example, how many of them are taller than 190cm.</p>
+         <p><b>II.</b> You can use the slider to investigate different ranges. Ranges here are marked by their midpoints. If you slide around you will see different midpoints appear out of which you can choose one.</p>
+         <p><b>III.</b> Once you click on "investigate range", the number of people who fell into this range will appear as a bar in the plot.</p>
+         <p><b>IV.</b> You have a total number of 5 investigations available. As there are 10 possible bars to be shown, it is your task to choose the investigations wisely. No repetitions of chosen ranges is possible.</p>
+         <p><b>V.</b> After you have seen 5 bars, your task will be to re-assess how many people you think were smaller than you. If you have chosen your investigations wisely, then your assessment should be more accurate.</p>
+         <button type="button" name="button"; onclick="clickStart('explain1show','explain1hide')"; >Hide explanation</button>
+         </div>
+         <div id="explain1hide" style="display:none">
+         <button type="button" name="button"; onclick="clickStart('explain1hide','explain1show')"; >Show explanation</button>
+        </div>
+      <center><b><div id="remainingex">Number of trials left: 5</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot1"></div>
+          &nbsp;&nbsp;&nbsp;&nbsp; <div id="slider1"></div>
+          <span id="slider1value">0</span><br />
+          <button type="button" name="button"; onclick="dotrial1()"; >Investigate range</button>          
+      </div>  
+      <br><br>
+</div>
+
+<div id="page6" style="display:none">
+    <h3>Re-assessment: Height</h3>
+<p> You have provided us with an assessment of your height. It is now your task to re-assess your statement on how many of the 1000 people you think might be smaller than you after having sampled the frequencies.</p><br>
+  How many (out of 1000) people will be smaller than you?: <input type="text" id="heightposterior"><br>
+<br><br>
+<p><b>Please click on the button below to go to the next task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckposterior('page6','page7', 'heightposterior')"; >Go to next task</button>  
+        </div>
+</div>
+
+
+
+<div id="page7" style="display:none">
+    <h3>Self-assessment: Emails:</h3>
+<p> We have asked 1000 students (male and female) about how many emails they receive daily. It is now your task to provide a self-assessment of how many emails you receive per day and how many people of those 1000 asked students -on average- receive less emails than you.</p><br>
+  How many emails do you receive per day?: <input type="text" id="email"><br>
+  How many (out of 1000) people will receive less emails than you per day?: <input type="text" id="emailprior"><br>
+<br><br>
+<p><b>Please click on the button below to go to the task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckprior('page7','page8', 'email', 0, 500, 'emailprior')"; >Go to task</button>  
+        </div>
+</div>
+
+
+
+
+<div id="page8" style="display:none">
+      <!-- Begin page content -->
+       <div class="page-header">
+          <h1> <font size="4">Please explore the frequency plot.</font> </h1>
+        </div>
+         <div id="explain2show" style="display:block">
+         <p> <b>Sampling for Emails - Explanation:</b></p><br>
+         <p><b>I.</b> Below you see an empty plot of a frequency distribution. A frequency distribution tells you how many people of the 1000 people we have asked fell into different ranges. For example, how many of them receive more than 100 emails.</p>
+         <p><b>II.</b> You can use the slider to investigate different ranges. Ranges here are marked by their midpoints. If you slide around you will see different midpoints appear out of which you can choose one.</p>
+         <p><b>III.</b> Once you click on "investigate range", the number of people who fell into this range will appear as a bar in the plot.</p>
+         <p><b>IV.</b> You have a total number of 5 investigations available. As there are 10 possible bars to be shown, it is your task to choose the investigations wisely.</p>
+         <p><b>V.</b> After you have seen 5 bars, your task will be to re-assess how many people you receive less emails than you. If you have chosen your investigations wisely, then your assessment should be more accurate.</p>
+         <button type="button" name="button"; onclick="clickStart('explain2show','explain2hide')"; >Hide explanation</button>
+         </div>
+         <div id="explain2hide" style="display:none">
+         <button type="button" name="button"; onclick="clickStart('explain2hide','explain2show')"; >Show explanation</button>
+        </div>
+      <center><b><div id="remaining2">Number of trials left: 5</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot2"></div>
+          &nbsp;&nbsp;&nbsp;&nbsp; <div id="slider2"></div>
+          <span id="slider2value">0</span><br />
+          <button type="button" name="button"; onclick="dotrial2()"; >Investigate range</button>          
+      </div>  
+      <br><br>
+</div>
+
+<div id="page9" style="display:none">
+    <h3>Re-assessment: Emails</h3>
+<p> You have provided us with an assessment of your own. It is now your task to re-assess your statement on how many of the 1000 people you think receive less emails than you after having sampled the frequencies.</p><br>
+  How many (out of 1000) people will receive less emails than you?: <input type="text" id="emailposterior"><br>
+<br><br>
+<p><b>Please click on the button below to go to the next task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckposterior('page9','page10', 'emailposterior')"; >Go to next task</button>  
+        </div>
+</div>
+
+
+
+<div id="page10" style="display:none">
+    <h3>Self-assessment: Dice:</h3>
+<p> We have rolled a fair dice as long as it took us to roll a 6 for 1000 times. This means there were 1000 trials and we stopped a trial after the first time a 6 appeared and then went on to the next trial, always counting the number of throws it took us until the first 6 appeared. It is now your task to provide an assessment of how often you think -on average- we had to throw the dice in order for a 6 to show up for the first time.</p><br>
+  How many throws on average do you think one has to throw a dice until the first 6 appears?: <input type="text" id="dice"><br>
+  In how many (out of 1000) trials do you think the first 6 showed up earlier?: <input type="text" id="diceprior"><br>
+<br><br>
+<p><b>Please click on the button below to go to the task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckprior('page10','page11', 'dice', 1, 100, 'diceprior')"; >Go to task</button>  
+        </div>
+</div>
+
+
+
+
+<div id="page11" style="display:none">
+      <!-- Begin page content -->
+       <div class="page-header">
+          <h1> <font size="4">Please explore the frequency plot.</font> </h1>
+        </div>
+         <div id="explain3show" style="display:block">
+         <p> <b>Sampling for Dice - Explanation:</b></p><br>
+         <p><b>I.</b> Below you see an empty plot of a frequency distribution. A frequency distribution tells you how many people of the 1000 people we have asked fell into different ranges. For example, how many times we had to throw more often than 30 times until the first 6 appeared.</p>
+         <p><b>II.</b> You can use the slider to investigate different ranges. Ranges here are marked by their midpoints. If you slide around you will see different midpoints appear out of which you can choose one.</p>
+         <p><b>III.</b> Once you click on "investigate range", the number of trials who fell into this range will appear as a bar in the plot.</p>
+         <p><b>IV.</b> You have a total number of 5 investigations available. As there are 10 possible bars to be shown, it is your task to choose the investigations wisely.</p>
+         <p><b>V.</b> After you have seen 5 bars, your task will be to re-assess how often you think we had to throw the dice less than your intial assessment until the first 6 appeared. If you have chosen your investigations wisely, then you assessment should be more accurate.</p>
+         <button type="button" name="button"; onclick="clickStart('explain3show','explain3hide')"; >Hide explanation</button>
+         </div>
+         <div id="explain3hide" style="display:none">
+         <button type="button" name="button"; onclick="clickStart('explain3hide','explain3show')"; >Show explanation</button>
+        </div>
+      <center><b><div id="remaining3">Number of trials left: 5</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot3"></div>
+          &nbsp;&nbsp;&nbsp;&nbsp; <div id="slider3"></div>
+          <span id="slider3value">0</span><br />
+          <button type="button" name="button"; onclick="dotrial3()"; >Investigate range</button>          
+      </div>  
+      <br><br>
+</div>
+
+<div id="page12" style="display:none">
+    <h3>Re-assessment: Dice</h3>
+<p> You have provided us with an assessment of your own. It is now your task to re-assess your statement on how many of the 1000 trials we had to throw the dice less often than your provided estimate.</p><br>
+  In how many (out of 1000) trials did we have to throw the dice less than your assessment: <input type="text" id="diceposterior"><br>
+<br><br>
+<p><b>Please click on the button below to go to the next task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckposterior('page12','page13', 'diceposterior')"; >Go to next task</button>  
+        </div>
+</div>
+
+
+
+
+
+
+<div id="page13" style="display:none">
+    <h3>Self-assessment: Video Game:</h3>
+<p> We have designed a video game similar to Tetris in which people can get a score between 0 an 12 points. We have tested this game on 1000 players. Even though you have not played this game before, we would like you to provide an assessment (a guess) of what score you think you would get.</p><br>
+  How high would you score in this video game (0-12)?: <input type="text" id="game"><br>
+  How many people (out of a 1000) would score worse than you?: <input type="text" id="gameprior"><br>
+<br><br>
+<p><b>Please click on the button below to go to the task.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckprior('page13','page14', 'game', 0, 12, 'gameprior')"; >Go to task</button>  
+        </div>
+</div>
+
+
+
+
+<div id="page14" style="display:none">
+      <!-- Begin page content -->
+       <div class="page-header">
+          <h1> <font size="4">Please explore the frequency plot.</font> </h1>
+        </div>
+         <div id="explain4show" style="display:block">
+         <p> <b>Sampling for Video Game - Explanation:</b></p><br>
+         <p><b>I.</b> Below you see an empty plot of a frequency distribution. A frequency distribution tells you how many people of the 1000 people who have played the game fell into different ranges. For example, how many of scored higher than 11 points.</p>
+         <p><b>II.</b> You can use the slider to investigate different ranges. Ranges here are marked by their midpoints. If you slide around you will see different midpoints appear out of which you can choose one.</p>
+         <p><b>III.</b> Once you click on "investigate range", the number of people who fell into this range will appear as a bar in the plot.</p>
+         <p><b>IV.</b> You have a total number of 5 investigations available. As there are 10 possible bars to be shown, it is your task to choose the investigations wisely.</p>
+         <p><b>V.</b> After you have seen 5 bars, your task will be to re-assess how many people you think would score worse than you. If you have chosen your investigations wisely, then your assessment should be more accurate.</p>
+         <button type="button" name="button"; onclick="clickStart('explain4show','explain4hide')"; >Hide explanation</button>
+         </div>
+         <div id="explain4hide" style="display:none">
+         <button type="button" name="button"; onclick="clickStart('explain4hide','explain4show')"; >Show explanation</button>
+        </div>
+      <center><b><div id="remaining4">Number of trials left: 5</div></b></center> 
+      <div style="width:350px;margin:0 auto">
+          <div class="plot4"></div>
+          &nbsp;&nbsp;&nbsp;&nbsp; <div id="slider4"></div>
+          <span id="slider4value">0</span><br />
+          <button type="button" name="button"; onclick="dotrial4()"; >Investigate range</button>          
+      </div>  
+      <br><br>
+</div>
+
+<div id="page15" style="display:none">
+    <h3>Re-assessment: Video game</h3>
+<p> You have provided us with an assessment of your own. It is now your task to re-assess your statement on how many of the 1000 people you think might score worse than your initial assessment after having sampled the frequencies.</p><br>
+  How many (out of 1000) people will score worse than you?: <input type="text" id="gameposterior"><br>
+<br><br>
+<p><b>Please click on the button below to go to the next page.</b></p>
+        <div style="width:500px;margin:0 auto">
+          <button type="button" name="button"; onclick="clickCheckposterior('page15','page16', 'gameposterior')"; >Go to next page</button>  
+        </div>
+</div>
+
+
+
+
+
+<div id="page16" style="display:none">
+        <fieldset>
+            <legend>Please tell us a bit about yourself</legend>
+            <div style="float:left;width:400px;margin:5px">
+                How old are you?<br>
+                <input id="age" type="radio" name="age" value="20" >18-25<br>
+                <input id="age" type="radio" name="age" value="30" >26-35<br>
+                <input id="age" type="radio" name="age" value="40" >36-50<br>
+                <input id="age" type="radio" name="age" value="50" >above 50<br>
+            </div>
+            
+            <div style="float:left;width:400px;margin:5px">
+                What's your gender?<br>
+                <input id="gender" type="radio" name="gender" value="0" >Female<br>
+                <input id="gender" type="radio" name="gender" value="1" >Male<br>
+            </div>
+
+            <div style="float:left;width:400px;margin:5px">
+                Handedness?<br>
+                <input type="radio" name="handed" value="1"          >Right<br>
+                <input type="radio" name="handed" value="2"          >Left<br>
+              </div>
+                        
+        </fieldset>
+        <div style="width:50px;margin:0 auto">
+         <button type="button" name="button"; onclick="senddata()"; >Done</button>
+        </div>
+</div>
+
+<div id="page17" style="display:none">
+    <h3>Thank you for participating in our experiment!</h3>
+    <p>Your prolific link is: <b>https://prolificacademic.co.uk/submissions/55d25d655bc5bc0012d90451/complete?cc=FEYOGGAT</b></p>
+
+</div>
+
+</div>
+</div>
+<script src="https://dl.dropboxusercontent.com/u/4213788/bayesquad.js" charset="utf-8"></script>
+</body>
+</html>
