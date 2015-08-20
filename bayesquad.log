@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.2)  2 AUG 2015 15:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.2)  20 AUG 2015 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,85 +463,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--95
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--125
+
+ []
+
+[6
+
+] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 128.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
- [6
-
-]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
+ [8]
 Chapter 2.
-<bayescog.pdf, id=33, 597.23125pt x 597.23125pt>
-File: bayescog.pdf Graphic file (type pdf)
- <use bayescog.pdf>
-Package pdftex.def Info: bayescog.pdf used on input line 127.
-(pdftex.def)             Requested size: 358.3415pt x 358.3415pt.
-
-
-Package natbib Warning: Citation `schulz2015learning' on page 7 undefined on in
-put line 130.
-
-[7
-
-] [8 <./bayescog.pdf>]
-Chapter 3.
 [9
 
-]
+] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+bbold on input line 179.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) [11]
+
+Package natbib Warning: Citation `scholkopf2001generalized' on page 12 undefine
+d on input line 215.
+
+
+Package natbib Warning: Citation `kapoor2007active' on page 12 undefined on inp
+ut line 215.
+
+[12] <bayescog.pdf, id=58, 597.23125pt x 597.23125pt>
+File: bayescog.pdf Graphic file (type pdf)
+ <use bayescog.pdf>
+Package pdftex.def Info: bayescog.pdf used on input line 230.
+(pdftex.def)             Requested size: 358.3415pt x 358.3415pt.
+
+[13] [14 <./bayescog.pdf>] [15]
+Chapter 3.
+[16
+
+] [17]
 Chapter 4.
-[10
+[18
 
-]
+] <probdists.pdf, id=88, 505.89pt x 505.89pt>
+File: probdists.pdf Graphic file (type pdf)
+ <use probdists.pdf>
+Package pdftex.def Info: probdists.pdf used on input line 291.
+(pdftex.def)             Requested size: 344.00064pt x 344.00064pt.
+
+<screenshot.png, id=89, 921.4425pt x 637.38126pt>
+File: screenshot.png Graphic file (type png)
+ <use screenshot.png>
+Package pdftex.def Info: screenshot.png used on input line 299.
+(pdftex.def)             Requested size: 460.72012pt x 318.68985pt.
+ [19 <./probdists.pdf>] [20 <./screenshot.png>] [21]
 Chapter 5.
-[11
+<rawsample.pdf, id=106, 505.89pt x 505.89pt>
+File: rawsample.pdf Graphic file (type pdf)
+ <use rawsample.pdf>
+Package pdftex.def Info: rawsample.pdf used on input line 325.
+(pdftex.def)             Requested size: 344.00064pt x 344.00064pt.
+ [22
 
-]
+ <./rawsample.pdf>] [23]
 Chapter 6.
-[12
+[24
 
 ]
 Chapter 7.
-(./bayesquad.bbl [13
+(./bayesquad.bbl [25
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[14
+[26
 
-] (./bayesquad.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-) ) 
+] (./bayesquad.aux) ) 
 Here is how much of TeX's memory you used:
- 5991 strings out of 493304
- 85009 string characters out of 6139872
- 159071 words of memory out of 5000000
- 9308 multiletter control sequences out of 15000+600000
- 16613 words of font info for 62 fonts, out of 8000000 for 9000
+ 6030 strings out of 493304
+ 85681 string characters out of 6139872
+ 168132 words of memory out of 5000000
+ 9333 multiletter control sequences out of 15000+600000
+ 18085 words of font info for 68 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,43p,861b,257s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on bayesquad.pdf (15 pages, 220064 bytes).
+ 38i,15n,43p,2468b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-ty
+pe1/bbold10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb>
+Output written on bayesquad.pdf (27 pages, 318533 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 183 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
