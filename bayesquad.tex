@@ -325,8 +325,25 @@ The input spaces chosen by participants are presented in Figure~\ref{raw} below.
     \includegraphics[scale=0.68]{rawsample.pdf}
 \end{figure}
 It can already be seen that the sampling behavior is not uniform over the whole space, but --at least for the height and the dice example-- seems to match the actual distributional frequencies.\\
-Another things to check is the difference...
+Another things to check is the difference between the prior and posterior assessment.  For this, we calculated the true cumulative value, that is --given participants' assessment-- how many of the 1000 trials are expected to be smaller than that value and calculated the distance to that value from their prior and posterior assessment. Results are presented in Figure~\ref{distance}.
+
+\begin{figure}[h!]
+\caption{Aggregated distance to truth, prior and posterior.}
+\label{distance}
+  \centering
+    \includegraphics[scale=0.68]{valuedistance.pdf}
+\end{figure}
+It can be seen that, unfortunately, the posterior assessment only gets better for the height and the game assessment and gets slightly worse for the email and the dice assessment. 
+
 \section{Modeling results}
+We checked how well the Sequential Bayesian Quadrature method predicted the one step ahead look-up for each participants for each trial and step and calculated the AIC based on the softmax equation described above. The final modeling results per scenario and participants are shown in Figure~\ref{aic}.
+\begin{figure}[h!]
+\caption{Used probability distributions.}
+\label{aic}
+  \centering
+    \includegraphics[scale=0.68]{aicbars.pdf}
+\end{figure}
+Even though not all participants are well-described by the Sequential Bayesian Quadrature approach, the mean AIC-value for all scenarios, height ($t = -3.8661, df = 48, p<0.05$), emails ($t = -3.6799, df = 48, p<0.05$), dice ($t = -4.1012, df = 48, p<0.05$), and game ($t = -4.0018, df = 48, p<0.05$) all differed significantly from the expected mean AIC of a random model. Therefore, the hypothesis that all people sample randomly across the probability space can safely be rejected.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Discussion}
 \emph{This chapter will discuss the results and explain why the Bayesian Quadrature method outperformed the other methods.}

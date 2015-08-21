@@ -18,5 +18,5 @@
 \contentsline {chapter}{\numberline {5}Results}{22}
 \contentsline {section}{\numberline {5.1}Raw results}{22}
 \contentsline {section}{\numberline {5.2}Modeling results}{23}
-\contentsline {chapter}{\numberline {6}Discussion}{24}
-\contentsline {chapter}{\numberline {7}Conclusion}{25}
+\contentsline {chapter}{\numberline {6}Discussion}{25}
+\contentsline {chapter}{\numberline {7}Conclusion}{26}
